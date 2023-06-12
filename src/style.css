@@ -1,1 +1,37 @@
-@import "~bootstrap/dist/css/bootstrap.min.css";
+.maincontainer {
+  position: relative;
+  width: 250px;
+  height: 320px;
+}
+
+#thecard {
+  position: absolute;
+  width: 223px;
+  height: 324px;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+
+
+.thefront {
+  position: absolute;
+  width: 223px;
+  height: 324px;
+  backface-visibility: hidden;
+}
+
+.theback {
+  position: absolute;
+  width: 223px;
+  height: 324px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+#color {
+  color: red;
+}
+
+#thecard:hover{
+  transform: rotateY(180deg);
+}
