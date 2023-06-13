@@ -19,10 +19,12 @@ card.addEventListener("mouseenter", function() {
   text.innerHTML = `Your card is the <span id = "color">${cardRandom}</span> of <span id = "color">${suitRandom}</span>`;
   let color = document.querySelectorAll("#color");
   if (suitRandom === "hearts" || suitRandom === "diamonds") {
-    color[0].style.color = "red";
-    color[1].style.color = "red";
+    color.forEach(element => {
+      element.style.color = "red";
+    });
   } else {
-    color[0].style.color = "black";
-    color[1].style.color = "black";
+    color.forEach(element => {
+      element.style.color = "black";
+    });
   }
 });
